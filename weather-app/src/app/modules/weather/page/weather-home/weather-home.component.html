@@ -17,4 +17,10 @@
       </fa-icon>
     </span>
   </form>
+  ''
 </div>
+
+<app-weather-card
+  *ngIf="weatherDataResponse"
+  [weatherDatas]="weatherDataResponse"
+></app-weather-card>

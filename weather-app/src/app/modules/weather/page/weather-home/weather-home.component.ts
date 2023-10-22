@@ -12,7 +12,7 @@ import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 export class WeatherHomeComponent implements OnInit, OnDestroy {
   private readonly destroy$: Subject<void> = new Subject<void>();
   initialCityName = 'São Paulo';
-  weatherData!: Weather;
+  weatherDataResponse!: Weather;
   searchIcon = faMagnifyingGlass;
 
   constructor(private weatherService: WeatherService) {}
@@ -27,7 +27,7 @@ export class WeatherHomeComponent implements OnInit, OnDestroy {
       .pipe(takeUntil(this.destroy$))
       .subscribe({
         next: (response) => {
-          response && (this.weatherData = response);
+          response && (this.weatherDataResponse = response);
           console.log(response);
         },
         error: (error) => {
