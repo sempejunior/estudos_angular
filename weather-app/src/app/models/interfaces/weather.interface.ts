@@ -3,6 +3,7 @@ export interface Weather {
     lon: number;
     lat: number;
   };
+  name: string;
   weather: [
     {
       id: number;
