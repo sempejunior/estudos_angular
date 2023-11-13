@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CookieService } from 'ngx-cookie-service';
 import { PrimeNGConfig } from 'primeng/api';
 
 @Component({
